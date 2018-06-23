@@ -24,3 +24,7 @@ sudo openssl x509 -in /etc/letsencrypt/live/freetv8.com/cert.pem -noout -text
             proxy_set_header X-Forwarded-Proto $scheme;
         }
     }
+
+
+
+https://www.nginx.com/blog/using-free-ssltls-certificates-from-lets-encrypt-with-nginx/
