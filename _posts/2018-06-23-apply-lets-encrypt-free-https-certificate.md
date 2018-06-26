@@ -57,3 +57,10 @@ https://letsmonitor.org/
 ```
 ./certbot-auto renew
 ```
+
+
+删除证书
+```
+./certbot-auto delete
+
+```
