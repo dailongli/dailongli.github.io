@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "免费https证书申请与配置"
+title: "申请Let's Encrypt免费https证书"
 ---
 
 
