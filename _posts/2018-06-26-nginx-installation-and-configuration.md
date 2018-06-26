@@ -24,6 +24,32 @@ make
 sudo make install
 ```
 
+
+正向代理
+```
+git clone https://github.com/chobits/ngx_http_proxy_connect_module.git
+cd nginx-1.14.0
+patch -p1 < ../ngx_http_proxy_connect_module/patch/proxy_connect_rewrite_1014.patch
+./configure --with-http_ssl_module --with-http_v2_module --add-module=../ngx_http_proxy_connect_module
+make 
+sudo make install
+```
+```
+    server {
+        listen       3128;
+        resolver     1.1.1.1;
+        proxy_connect;
+        proxy_connect_allow    443 563;
+        proxy_connect_connect_timeout  10s;
+        proxy_connect_read_timeout     10s;
+        proxy_connect_send_timeout     10s;
+        location / {
+            proxy_pass $scheme://$http_host$uri$is_args$args;
+        }
+    }
+```
+
+
 // 创建开机自动启动脚本文件
 ```
 sudo touch /lib/systemd/system/nginx.service
