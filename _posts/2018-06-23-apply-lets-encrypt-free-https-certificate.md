@@ -3,7 +3,7 @@ layout: post
 title: "申请Let's Encrypt免费https证书"
 ---
 
-{% highlight %}
+```
 git clone https://github.com/certbot/certbot.git
 cd certbot
 
@@ -30,4 +30,4 @@ sudo openssl x509 -in /etc/letsencrypt/live/freetv8.com/cert.pem -noout -text
 https://letsmonitor.org/
 
 ./certbot-auto renew
-{% endhighlight %}
+```
