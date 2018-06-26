@@ -50,10 +50,45 @@ sudo make install
 ```
 
 
+流媒体
+```
+git clone https://github.com/kaltura/nginx-vod-module.git
+./configure --with-http_mp4_module --add-module=../nginx-vod-module --with-file-aio --with-threads --with-cc-opt="-O3" --with-http_ssl_module --with-http_v2_module
+```
+
+
 // 创建开机自动启动脚本文件
 ```
 sudo touch /lib/systemd/system/nginx.service
 ```
+
+
+php支持
+```
+sudo apt-get -y install php7.2-fpm
+sudo systemctl start php7.2-fpm
+sudo systemctl enable php7.2-fpm
+```
+```
+user www-data
+http {
+    server {
+        location / {
+            root html;
+            index index.php index.html;
+        }
+        location ~ \.php$ {
+            root html;
+            fastcgi_pass unix:/run/php/php7.2-fpm.sock;
+            fastcgi_index index.php;
+            fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+            include fastcgi_params;
+        }
+    }
+}
+```
+
+
 
 ```
 # Stop dance for nginx
