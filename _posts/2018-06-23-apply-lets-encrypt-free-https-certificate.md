@@ -4,7 +4,7 @@ title: "申请Let's Encrypt免费https证书"
 ---
 
 
-{% highlight %}
+{% highlight bash %}
 git clone https://github.com/certbot/certbot.git
 cd certbot
 
