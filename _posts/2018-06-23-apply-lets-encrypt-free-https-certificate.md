@@ -11,8 +11,9 @@ cd certbot
 
 sudo tree /etc/letsencrypt/live/freetv8.com
 sudo openssl x509 -in /etc/letsencrypt/live/freetv8.com/cert.pem -noout -text
+```
 
-
+```
     server {
         listen      443 ssl http2;
         server_name *.freetv8.com;
@@ -25,9 +26,10 @@ sudo openssl x509 -in /etc/letsencrypt/live/freetv8.com/cert.pem -noout -text
             proxy_set_header X-Forwarded-Proto $scheme;
         }
     }
-
+```
 
 https://letsmonitor.org/
 
+```
 ./certbot-auto renew
 ```
