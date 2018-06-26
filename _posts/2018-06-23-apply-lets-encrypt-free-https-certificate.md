@@ -27,6 +27,12 @@ nginx配置
         server_name .freetv8.com .freetv8.xyz;
         ssl_certificate /etc/letsencrypt/live/freetv8.com/fullchain.pem;
         ssl_certificate_key /etc/letsencrypt/live/freetv8.com/privkey.pem;
+        if ($host !~ ^www\.) {
+            return 301 https://www.$host$request_uri;
+        }
+        if ($scheme != "https") {
+            return 301 https://$host$request_uri;
+        } 
         location / {
             proxy_pass http://localhost:6000;
             proxy_set_header Host              $host;
