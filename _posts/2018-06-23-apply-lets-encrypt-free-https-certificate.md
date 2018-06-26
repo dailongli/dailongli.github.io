@@ -3,7 +3,7 @@ layout: post
 title: "申请Let's Encrypt免费https证书"
 ---
 
-{% highlight ruby %}
+{% highlight %}
 git clone https://github.com/certbot/certbot.git
 cd certbot
 
@@ -25,7 +25,7 @@ sudo openssl x509 -in /etc/letsencrypt/live/freetv8.com/cert.pem -noout -text
             proxy_set_header X-Forwarded-Proto $scheme;
         }
     }
-{% endhightlight %}
+{% endhighlight %}
 
 https://letsmonitor.org/
 
