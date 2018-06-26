@@ -18,11 +18,13 @@ sudo tree /etc/letsencrypt/live/freetv8.com
 sudo openssl x509 -in /etc/letsencrypt/live/freetv8.com/cert.pem -noout -text
 ```
 
+
+.freetv8.com包括freetv8.com和www.freetv8.com
 nginx配置
 ```
     server {
         listen      443 ssl http2;
-        server_name *.freetv8.com;
+        server_name .freetv8.com .freetv8.xyz;
         ssl_certificate /etc/letsencrypt/live/freetv8.com/fullchain.pem;
         ssl_certificate_key /etc/letsencrypt/live/freetv8.com/privkey.pem;
         location / {
