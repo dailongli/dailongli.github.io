@@ -25,8 +25,9 @@ sudo openssl x509 -in /etc/letsencrypt/live/freetv8.com/cert.pem -noout -text
             proxy_set_header X-Forwarded-Proto $scheme;
         }
     }
-{% endhighlight %}
+
 
 https://letsmonitor.org/
 
 ./certbot-auto renew
+{% endhighlight %}
