@@ -3,8 +3,11 @@ layout: post
 title: "申请Let's Encrypt免费https证书"
 ---
 
+
+{% highlight %}
 git clone https://github.com/certbot/certbot.git
 cd certbot
+
 ./certbot-auto certonly  -d "*.freetv8.com" -d "freetv8.com" --manual --preferred-challenges dns-01  --server https://acme-v02.api.letsencrypt.org/directory
 
 sudo tree /etc/letsencrypt/live/freetv8.com
@@ -23,9 +26,8 @@ sudo openssl x509 -in /etc/letsencrypt/live/freetv8.com/cert.pem -noout -text
             proxy_set_header X-Forwarded-Proto $scheme;
         }
     }
-
+{% endhightlight %}
 
 https://letsmonitor.org/
-
 
 ./certbot-auto renew
