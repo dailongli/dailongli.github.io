@@ -6,13 +6,19 @@ title: "申请Let's Encrypt免费https证书"
 ```
 git clone https://github.com/certbot/certbot.git
 cd certbot
+```
 
-./certbot-auto certonly  -d "*.freetv8.com" -d "freetv8.com" --manual --preferred-challenges dns-01  --server https://acme-v02.api.letsencrypt.org/directory
+
+
+第一个域名是证书的Subject
+```
+./certbot-auto certonly -d "*.freetv8.com,freetv8.com,*.freetv8.xyz,freetv8.xyz" --manual --preferred-challenges dns-01  --server https://acme-v02.api.letsencrypt.org/directory
 
 sudo tree /etc/letsencrypt/live/freetv8.com
 sudo openssl x509 -in /etc/letsencrypt/live/freetv8.com/cert.pem -noout -text
 ```
 
+nginx配置
 ```
     server {
         listen      443 ssl http2;
@@ -28,8 +34,11 @@ sudo openssl x509 -in /etc/letsencrypt/live/freetv8.com/cert.pem -noout -text
     }
 ```
 
+监控证书
 https://letsmonitor.org/
 
+
+如果过期需要renew
 ```
 ./certbot-auto renew
 ```
