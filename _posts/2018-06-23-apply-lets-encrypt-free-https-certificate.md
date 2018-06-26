@@ -3,7 +3,6 @@ layout: post
 title: "申请Let's Encrypt免费https证书"
 ---
 
-
 git clone https://github.com/certbot/certbot.git
 cd certbot
 ./certbot-auto certonly  -d "*.freetv8.com" -d "freetv8.com" --manual --preferred-challenges dns-01  --server https://acme-v02.api.letsencrypt.org/directory
