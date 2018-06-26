@@ -3,8 +3,7 @@ layout: post
 title: "申请Let's Encrypt免费https证书"
 ---
 
-
-{% highlight bash %}
+{% highlight ruby %}
 git clone https://github.com/certbot/certbot.git
 cd certbot
 
