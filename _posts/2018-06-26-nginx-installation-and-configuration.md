@@ -13,6 +13,14 @@ sudo apt-get -y install build-essential libpcre3-dev zlib1g-dev libssl-dev
 ```
 
 
+CentOS
+、、、
+yum install -y wget git gcc pcre-devel openssl-devel
+、、、
+
+
+
+
 // 下载编译和安装
 打开https://nginx.org/en/download.html，下载最新版本
 ```
@@ -23,6 +31,13 @@ cd nginx-1.14.0/
 make
 sudo make install
 ```
+
+
+```
+git clone https://github.com/arut/nginx-rtmp-module.git
+./configure --with-http_ssl_module --with-http_v2_module --add-module=../nginx-rtmp-module
+```
+
 
 
 正向代理
