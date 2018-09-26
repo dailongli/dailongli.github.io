@@ -55,7 +55,7 @@ net.ipv4.ip_forward=1
 ifconfig find interface
 sudo iptables -t nat -A POSTROUTING -s 10.10.10.10/24 -o eth0 -j MASQUERADE
 
-iptables -L -t nat
+sudo iptables -L -t nat
 
 
 sudo apt-get install iptables-persistent
