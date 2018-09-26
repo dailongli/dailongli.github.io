@@ -5,8 +5,8 @@ title: "Ubuntu下配置IKEv2 VPN"
 
 
 ```
-apt install strongswan
-vim /etc/ipsec.conf
+sudo apt install strongswan
+sudo vim /etc/ipsec.conf
 ```
 
 ```
@@ -35,25 +35,25 @@ conn ikev2-vpn
 ```
 
 ```
-vim /etc/ipsec.secrets
+sudo vim /etc/ipsec.secrets
 : PSK thisispresharedkey
 
-service strongswan restart
+sudo service strongswan restart
 ```
 
 ```
-sysctl -w net.ipv4.ip_forward=1
+sudo sysctl -w net.ipv4.ip_forward=1
 
 
 
-vim /etc/sysctl.conf
+sudo vim /etc/sysctl.conf
 net.ipv4.ip_forward=1
 ```
 
 
 ```
 ifconfig find interface
-iptables -t nat -A POSTROUTING -s 10.10.10.10/24 -o eth0 -j MASQUERADE
+sudo iptables -t nat -A POSTROUTING -s 10.10.10.10/24 -o eth0 -j MASQUERADE
 
 iptables -L -t nat
 
