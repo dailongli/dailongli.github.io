@@ -28,4 +28,11 @@ Options
   --url-base                      base URL path prefix for commands, e.g. wd/url
   --port-server                   address of server to contact for reserving a port
   --whitelisted-ips               comma-separated whitelist of remote IPv4 addresses which are allowed to connect to ChromeDriver
+```
 
+运行chromedriver，默认监听9515端口
+```
+$chromedriver
+Starting ChromeDriver 2.38.552518 (183d19265345f54ce39cbb94cf81ba5f15905011) on port 9515
+Only local connections are allowed.
+```
