@@ -16,25 +16,25 @@ cd certbot
 DNS方式生成证书
 注意第一个域名是证书的Subject
 ```
-./certbot-auto certonly -d "*.freetv8.com,freetv8.com,*.freetv8.xyz,freetv8.xyz" --manual --preferred-challenges dns-01  --server https://acme-v02.api.letsencrypt.org/directory
+./certbot-auto certonly -d "*.domain.com,domain.com,*.domain.xyz,domain.xyz" --manual --preferred-challenges dns-01  --server https://acme-v02.api.letsencrypt.org/directory
 ```
 
 验证证书
 ```
-sudo tree /etc/letsencrypt/live/freetv8.com
-sudo openssl x509 -in /etc/letsencrypt/live/freetv8.com/cert.pem -noout -text
+sudo tree /etc/letsencrypt/live/domain.com
+sudo openssl x509 -in /etc/letsencrypt/live/domain.com/cert.pem -noout -text
 ```
 
 nginx配置
-freetv8.com包括freetv8.com和www.freetv8.com
+domain.com包括domain.com和www.domain.com
 non-www转www
 non-https转https
 ```
     server {
         listen      443 ssl http2;
-        server_name .freetv8.com .freetv8.xyz;
-        ssl_certificate /etc/letsencrypt/live/freetv8.com/fullchain.pem;
-        ssl_certificate_key /etc/letsencrypt/live/freetv8.com/privkey.pem;
+        server_name .domain.com .domain.xyz;
+        ssl_certificate /etc/letsencrypt/live/domain.com/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/domain.com/privkey.pem;
         if ($host !~ ^www\.) {
             return 301 https://www.$host$request_uri;
         }
