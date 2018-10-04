@@ -39,7 +39,7 @@ Only local connections are allowed.
 
 
 
-下载<a href="http://selenium-release.storage.googleapis.com/3.14/selenium-server-standalone-3.14.0.jar" href="_blank">Selenium Server</a>并运行，默认监听端口4444
+下载<a href="http://selenium-release.storage.googleapis.com/3.14/selenium-server-standalone-3.14.0.jar" href="_blank">Selenium Server</a>并运行，默认监听4444端口
 ```
 $java -jar selenium-server-standalone-3.14.0.jar
 15:02:29.130 INFO [GridLauncherV3.launch] - Selenium build info: version: '3.14.0', revision: 'aacccce0'
