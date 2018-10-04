@@ -36,3 +36,14 @@ $chromedriver
 Starting ChromeDriver 2.38.552518 (183d19265345f54ce39cbb94cf81ba5f15905011) on port 9515
 Only local connections are allowed.
 ```
+
+
+
+下载<a href="http://selenium-release.storage.googleapis.com/3.14/selenium-server-standalone-3.14.0.jar" href="_blank">Selenium Server</a>并运行，默认监听端口4444
+```
+$java -jar selenium-server-standalone-3.14.0.jar
+15:02:29.130 INFO [GridLauncherV3.launch] - Selenium build info: version: '3.14.0', revision: 'aacccce0'
+15:02:29.134 INFO [GridLauncherV3$1.launch] - Launching a standalone Selenium Server on port 4444
+2018-10-04 15:02:29.408:INFO::main: Logging initialized @1168ms to org.seleniumhq.jetty9.util.log.StdErrLog
+15:02:29.728 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
+```
