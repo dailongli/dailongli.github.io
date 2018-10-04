@@ -4,3 +4,12 @@ title: "使用Selenium破解js"
 ---
 
 <a href="https://www.seleniumhq.org/" target="_blank">Selenium</a>是一个基于浏览器的自动化测试工具。中文意思是硒。
+
+
+
+```
+pip install -U selenium
+```
+
+
+下载最新的<a href="https://sites.google.com/a/chromium.org/chromedriver/downloads" target="_blank">ChromeDriver</a>
