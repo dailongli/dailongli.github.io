@@ -38,12 +38,6 @@ Only local connections are allowed.
 ```
 
 
+访问 http://localhost:9515/status
 
-下载<a href="http://selenium-release.storage.googleapis.com/3.14/selenium-server-standalone-3.14.0.jar" href="_blank">Selenium Server</a>并运行，默认监听4444端口
-```
-$java -jar selenium-server-standalone-3.14.0.jar
-15:02:29.130 INFO [GridLauncherV3.launch] - Selenium build info: version: '3.14.0', revision: 'aacccce0'
-15:02:29.134 INFO [GridLauncherV3$1.launch] - Launching a standalone Selenium Server on port 4444
-2018-10-04 15:02:29.408:INFO::main: Logging initialized @1168ms to org.seleniumhq.jetty9.util.log.StdErrLog
-15:02:29.728 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
-```
+{"sessionId":"","status":0,"value":{"build":{"version":"alpha"},"os":{"arch":"x86_64","name":"Mac OS X","version":"10.14.0"}}}
