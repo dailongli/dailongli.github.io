@@ -3,6 +3,11 @@ type: post
 title: RouterOS配置VPN服务
 ---
 
+配置默认路由
+IP ---> Routes ---> Add ---> New Route
+Dst. Address: 0.0.0.0/0
+Gateway:      x.x.x.x
+
 
 1. 下载WinBox登录RouterOS
 
@@ -35,4 +40,4 @@ Password: password
 Service:  l2tp
 Profile:  l2tp-profile
 
- 
+缺少"IPSec共享密钥"。请验证您的设置，然后再重试连接。
