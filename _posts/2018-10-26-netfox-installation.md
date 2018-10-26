@@ -18,6 +18,6 @@ Language for non-Unicode programs: Chinese
 
 ```
 编译系统模块(一共27个项目)
-VS2003打开 系统模块/Platform
+VS2003打开 系统模块/Platform 编译生产发布组件和运行文件夹
 ```
 
