@@ -99,4 +99,15 @@ Build ---> Publish
 //模块名称查看Phone/client/game/yule/oxex　文件夹压缩oxex.zip
 放在RYFront/download/game/yule/oxex.zip
 资源版本号会影响热更新
+
+后台　网站系统　站点配置　移动版大厅配置
+字段1: http://192.168.2.2/download/
+字段2: 1
+字段3: 0
+
+
+复制msvcp71.dll到运行/release/unicode文件夹
+复制运行到服务器，依次打开协调服务器，聊天服务器，约战服务器，登录服务器
+
+打开游戏服务器 创建房间
 ```
