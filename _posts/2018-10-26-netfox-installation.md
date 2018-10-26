@@ -32,5 +32,7 @@ Build ---> Publish
 ```
 
 ```
-游戏组件/官方正版/荣耀正版三通_财富_二人牛牛/GameProject.sln
+编译子游戏
+打开游戏组件/官方正版/荣耀正版三通_财富_二人牛牛/GameProject.sln
+复制游戏组件/发布组件/服务器组件/Release/Unicode/OxExServer.DLL到运行/release/unicode文件夹
 ```
