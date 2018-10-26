@@ -90,4 +90,7 @@ Build ---> Publish
 游戏归属：ios	android
 禁用状态：	正常
 
+//模块名称查看Phone/client/game/yule/oxex　文件夹压缩oxex.zip
+放在RYFront/download/game/yule/oxex.zip
+
 ```
