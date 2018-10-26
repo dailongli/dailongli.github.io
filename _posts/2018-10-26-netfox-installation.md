@@ -25,7 +25,13 @@ VS2003打开 系统模块/Platform 编译生产发布组件和运行文件夹
 打开IP配置器/Collocate.exe生成Serverparameter.ini, 复制到运行/Release/Unicode文件夹内
 ```
 
+
+搭建前台和后台
 ```
+VS2017打开WHRYWEB/RYFront/RYFront.sln
+修改web.config数据库连接密码
+Build ---> Publish
+
 VS2017打开WHRYWEB/RYAdmin/RYAdmin.sln
 修改web.config数据库连接密码
 Build ---> Publish
