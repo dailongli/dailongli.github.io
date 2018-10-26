@@ -30,3 +30,7 @@ VS2017打开WHRYWEB/RYAdmin/RYAdmin.sln
 修改web.config数据库连接密码
 Build ---> Publish
 ```
+
+```
+游戏组件/官方正版/荣耀正版三通_财富_二人牛牛/GameProject.sln
+```
