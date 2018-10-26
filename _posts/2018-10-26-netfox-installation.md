@@ -56,4 +56,38 @@ Build ---> Publish
 服务端名称: OxExServer.DLL
 客户端名称: OxEx.exe
 支持类型: 所有
+
+ # 查看二人牛牛服务端头文件CMD_Ox.h 
+ #define KIND_ID 102
+模块标识102
+
+#define VERSION_SERVER PROCESS_VERSION(7,0,1)
+#define VERSION_CLIENT PROCESS_VERSION(7,0,1)
+即版本6.7.0.1
+
+
+
+系统维护 游戏管理 游戏 新增
+游戏标识: 102
+游戏名称: 二人牛牛
+游戏类型: 棋牌游戏
+挂接: 无挂接
+排序: 0
+模块名称: 二人牛牛
+进程名字: OxEx.exe
+赢一局经验: 0
+游戏属性: 热
+禁用状态:　正常
+是否存在移动版: 打勾
+
+系统维护 游戏管理 手游 新增
+游戏标识：102
+游戏名称：二人牛牛
+模块名称：	yule.oxex
+模块版本号：	6.7.0.1
+资源版本号：8
+排序：0
+游戏归属：ios	android
+禁用状态：	正常
+
 ```
