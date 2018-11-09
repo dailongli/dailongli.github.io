@@ -31,3 +31,8 @@ include $(BUILD_SHARED_LIBRARY)
 # 预编译共享库(LOCAL_SRC_FILES指向库文件路径)
 include $(PREBUILT_SHARED_LIBRARY)
 ```
+
+```
+# 自动加载其他Android.mk文件
+$(call import-module, external/bugly)
+```
