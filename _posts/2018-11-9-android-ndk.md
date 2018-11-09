@@ -21,6 +21,11 @@ LOCAL_MODULE_FILENAME := libnewfoo
 LOCAL_SRC_FILES := hello-jni.c
 # 添加include路径
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes/foo
+# 包含依赖的库，链接器会去除掉库文件中没有使用的死代码
+LOCAL_STATIC_LIBRARIES := cocos2d_lua_static
+LOCAL_STATIC_LIBRARIES += other_static
+# 类似LOCAL_STATIC_LIBRARIES，但包含静态库的所有源代码
+LOCAL_WHOLE_STATIC_LIBRARIES += mc_kernel_static
 
 # 共享库
 include $(BUILD_SHARED_LIBRARY)
