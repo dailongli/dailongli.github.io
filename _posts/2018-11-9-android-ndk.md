@@ -6,7 +6,7 @@ title: Android NDK
 jni/Android.mk
 
 ```
-# my-dir宏函数返回Android.mk所在目录，即jni/目录
+# 必须第一行，返回jni/目录
 LOCAL_PATH := $(call my-dir)
 ```
 
