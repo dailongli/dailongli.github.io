@@ -19,6 +19,8 @@ LOCAL_MODULE := hello-jni
 LOCAL_MODULE_FILENAME := libnewfoo
 # 指定源文件
 LOCAL_SRC_FILES := hello-jni.c
+# 添加include路径
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes/foo
 
 # 共享库
 include $(BUILD_SHARED_LIBRARY)
