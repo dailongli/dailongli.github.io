@@ -17,6 +17,6 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := hello-jni
 # 指定源文件
 LOCAL_SRC_FILES := hello-jni.c
-# 共享库
+# 编译为共享库
 include $(BUILD_SHARED_LIBRARY)
 ```
