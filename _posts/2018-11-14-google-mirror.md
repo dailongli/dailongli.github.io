@@ -1,4 +1,4 @@
 ---
-type: post
+layout: post
 title: google镜像
 ---
