@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cocos class函数"
+title: "Cocos2d-x Lua class函数"
 ---
 
 
