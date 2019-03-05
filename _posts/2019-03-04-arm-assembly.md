@@ -36,7 +36,7 @@ ARM指令
 
 ```
 B:    Branch
-BX:   Branch and Exchange      跳转并切换状态
+BX:   Branch and Exchange      跳转并切换(ARM或Thumb)状态
 BCC:  Branch if Carry Clear    CPSR寄存器条件标志位为0时跳转
 CMP:  Compare
 LDR:  Load
