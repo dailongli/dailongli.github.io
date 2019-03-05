@@ -21,6 +21,7 @@ R11:
 R12:
 R13:
 R14: LR (Link Register).               自动保存函数的返回地址。
+R15: PC (Program Counter).
 CPSR:  Current Program Status Register    
   N:
   Z:
