@@ -41,6 +41,8 @@ B:    Branch
 BL:   Branch with Link
 BX:   Branch and Exchange      跳转并切换(ARM或Thumb)状态
 BCC:  Branch if Carry Clear    CPSR寄存器条件标志位为0时跳转
+CBZ:  Compare and Brance on Zero
+CBNZ: Compare and Branch on Non-Zero
 CMP:  Compare
 CBZ:  Compare and Branch on Zero
 CBNZ: Compare and Branch on Non-Zero
