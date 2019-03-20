@@ -54,6 +54,7 @@ adb shell am start -D -n foxuc.qp.Gloqj/org.cocos2dx.lua.AppActivity
 ```
 4.Attach进程
 
+
 5
 ```
 adb jdwp
