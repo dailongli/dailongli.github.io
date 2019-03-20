@@ -43,7 +43,7 @@ adb shell chmod 755 /data/local/tmp/android_server
 adb shell
 su
 /data/local/tmp/android_server
-``
+```
 2.端口映射
 ```
 adb forward tcp:23946 tcp:23946
