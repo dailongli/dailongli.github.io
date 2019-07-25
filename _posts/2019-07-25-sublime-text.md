@@ -4,16 +4,12 @@ title: Sublime Text 3
 ---
 
 
-删除旧数据
-```
-rm -rf ~/.config//sublime-text-3/
-```
 
 
 Linux 下创建快捷命令
 
 ```
-ln -S ~/Downloads/sublime_text_3/sublime_text /usr/local/bin/subl
+ln -s ~/Downloads/sublime_text_3/sublime_text /usr/local/bin/subl
 ```
 
 
