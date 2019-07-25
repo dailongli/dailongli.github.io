@@ -4,13 +4,6 @@ title: Sublime Text 3
 ---
 
 
-```
-vim ~/Downloads/sublime_text_3/sublime_text
-:%!xxd
-
-9794 0D  ---> 0000 00
-```
-
 Linux 下创建快捷命令
 
 ```
