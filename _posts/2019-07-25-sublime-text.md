@@ -4,6 +4,13 @@ title: Sublime Text 3
 ---
 
 
+还原初始状态
+```
+OS X: ~/Library/Application Support/Sublime Text 3
+Windows: %APPDATA%\Sublime Text 3
+Linux: ~/.config/sublime-text-3
+```
+
 
 ```
 ----- BEGIN LICENSE -----
