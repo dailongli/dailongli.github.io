@@ -33,6 +33,6 @@ ln -s ~/Downloads/sublime_text_3/sublime_text /usr/local/bin/subl
 Preferences -> Settings
 ```
 {
-    "hot_exit": true
+    "hot_exit": false
 }
 ```
