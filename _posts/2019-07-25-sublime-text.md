@@ -5,10 +5,10 @@ title: Sublime Text 3
 
 
 
-Linux 下创建命令行
+Linux 下创建快捷命令
 
 ```
-ln ~/Downloads/sublime_text_3/sublime_text /usr/local/bin/subl
+ln -S ~/Downloads/sublime_text_3/sublime_text /usr/local/bin/subl
 ```
 
 
