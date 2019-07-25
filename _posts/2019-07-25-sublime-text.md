@@ -5,6 +5,16 @@ title: Sublime Text 3
 
 
 
+Linux 下创建命令行
+
+```
+ln ~/Downloads/sublime_text_3/sublime_text /usr/local/bin/subl
+```
+
+
+Preferences -> Settings
+
+
 ```
 ----- BEGIN LICENSE -----
 TwitterInc
