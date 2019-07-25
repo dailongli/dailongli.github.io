@@ -4,15 +4,6 @@ title: Sublime Text 3
 ---
 
 
-Linux 下创建快捷命令
-
-```
-ln -s ~/Downloads/sublime_text_3/sublime_text /usr/local/bin/subl
-```
-
-
-Preferences -> Settings
-
 
 ```
 ----- BEGIN LICENSE -----
@@ -28,4 +19,20 @@ A684C2DC 0B1583D4 19CBD290 217618CD
 DD9AF44B 99C49590 D2DBDEE1 75860FD2
 8C8BB2AD B2ECE5A4 EFC08AF2 25A9B864
 ------ END LICENSE ------
+```
+
+
+
+Linux 下创建快捷命令
+
+```
+ln -s ~/Downloads/sublime_text_3/sublime_text /usr/local/bin/subl
+```
+
+关闭启动多窗口
+Preferences -> Settings
+```
+{
+	"host_exit": false
+}
 ```
