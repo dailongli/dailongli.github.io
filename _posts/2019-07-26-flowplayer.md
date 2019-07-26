@@ -73,6 +73,7 @@ public function Config(config:Object, builtInConfig:Object, playerSwfUrl:String,
 }
 ```
 
+
 ```
 public class ConfigParser {
     var configObj:Object = config is String ? com.adobe.serialization.json.JSONforFP.decode(config as String) : config;
