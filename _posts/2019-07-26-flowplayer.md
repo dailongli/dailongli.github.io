@@ -19,6 +19,7 @@ git clone https://github.com/flowplayer/tld.git
 git clone https://github.com/mangui/flashls.git
 
 cd flash-build
+ant build-debug
 ant
 
 cd flashls/build
