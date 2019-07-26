@@ -68,15 +68,37 @@ public class Launcher extends StyleableSprite implements ErrorHandler {
 public function Config(config:Object, builtInConfig:Object, playerSwfUrl:String, controlsVersion:String, audioVersion:String) {
     this._configObject = createConfigObject(config, builtInConfig);
     _playlistBuilder = new PlaylistBuilder(playerId, this._configObject.playlist, this._configObject.clip);
+    _config = ConfigParser.parseConfig(configObj, BuiltInConfig.config, loaderInfo.url, VersionInfo.controlsVersion, VersionInfo.audioVersion);
+    callAndHandleError(initPhase1, PlayerError.INIT_FAILED);
 }
 ```
 
 ```
-public function PlaylistBuilder(playerId:String, playlist:Object, commonClip:Object) {
-    _commonClipObject = commonClip;
-    if (playlist is Array) {
-        _clipObjects = playlist as Array;
+public class ConfigParser {
+    var configObj:Object = config is String ? com.adobe.serialization.json.JSONforFP.decode(config as String) : config;
+    return new Config(configObj, builtInConfig, playerSwfUrl, controlsVersion, audioVersion);
+}
+```
+
+
+
+```
+public class Config { 
+    public function Config(config:Object, builtInConfig:Object, playerSwfUrl:String, controlsVersion:String, audioVersion:String) {
+        this._configObject = createConfigObject(config, builtInConfig);
+        _playlistBuilder = new PlaylistBuilder(playerId, this._configObject.playlist, this._configObject.clip);
     }
 }
+```
 
+
+```
+class PlaylistBuilder {
+    public function PlaylistBuilder(playerId:String, playlist:Object, commonClip:Object) {
+        _commonClipObject = commonClip;
+        if (playlist is Array) {
+            _clipObjects = playlist as Array;
+        }
+    }
+}
 ```
