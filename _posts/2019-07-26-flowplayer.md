@@ -109,3 +109,27 @@ class PlaylistBuilder {
     }
 }
 ```
+
+
+```
+public class Flowplayer extends FlowplayerBase {
+    public function Flowplayer {
+        super(stage, pluginRegistry, panel, animationEngine, errorHandler, config, playerSWFBaseURl);
+    }
+}
+```
+
+```
+public class FlowplayerBase extends PlayerEventDispatcher implements ErrorHandler {
+    public function FlowplayerBase(
+        stage:Stage, 
+        pluginRegistry:PluginRegistry,
+        panel:Panel, 
+        animationEngine:AnimationEngine, 
+        errorHandler:ErrorHandler, 
+        config:Config, 
+        playerSWFBaseURL:String) {
+
+    }
+}
+```
