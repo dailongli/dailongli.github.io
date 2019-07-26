@@ -62,3 +62,21 @@ public class Launcher extends StyleableSprite implements ErrorHandler {
     }
 }
 ```
+
+
+```
+public function Config(config:Object, builtInConfig:Object, playerSwfUrl:String, controlsVersion:String, audioVersion:String) {
+    this._configObject = createConfigObject(config, builtInConfig);
+    _playlistBuilder = new PlaylistBuilder(playerId, this._configObject.playlist, this._configObject.clip);
+}
+```
+
+```
+public function PlaylistBuilder(playerId:String, playlist:Object, commonClip:Object) {
+    _commonClipObject = commonClip;
+    if (playlist is Array) {
+        _clipObjects = playlist as Array;
+    }
+}
+
+```
