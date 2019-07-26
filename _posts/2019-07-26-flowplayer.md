@@ -37,6 +37,17 @@ public class FlowplayerComponent extends UIComponent {
 ```
 
 
+
+```
+html 通过 flashvars 传递参数给flash
+<object id="video_api" name="video_api" data="flowplayer.swf" type="application/x-shockwave-flash">
+    <param name="flashvars" value="config={...}">
+</object>
+
+flash 通过 root.loaderInfo.parameters 获取参数
+```
+
+
 ```
 public class Launcher extends StyleableSprite implements ErrorHandler {
     public function Launcher() {
