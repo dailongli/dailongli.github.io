@@ -44,7 +44,7 @@ html 通过 flashvars 传递参数给flash
     <param name="flashvars" value="config={...}">
 </object>
 
-flash 通过 root.loaderInfo.parameters 获取参数
+flash 通过 root.loaderInfo.parameters 获取传进来的参数
 ```
 
 
