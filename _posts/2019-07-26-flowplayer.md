@@ -60,6 +60,12 @@ public class Launcher extends StyleableSprite implements ErrorHandler {
         var configStr:String = Preloader(root).injectedConfig || root.loaderInfo.parameters["config"];
         var configObj:Object = configStr && configStr.indexOf("{") == 0 ? ConfigParser.parse(configStr) : {};
     }
+    private function initPhase1():void {
+        createFlowplayer();
+    }
+    private function createFlowplayer():void {
+        _flowplayer = new Flowplayer(stage, _pluginRegistry, _panel, _animationEngine, this, this, _config, URLUtil.playerBaseUrl);
+    }
 }
 ```
 
