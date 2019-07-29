@@ -68,6 +68,7 @@ public class Launcher extends StyleableSprite implements ErrorHandler {
         callAndHandleError(createFlashVarsConfig, PlayerError.INIT_FAILED);
     }
     private function createFlashVarsConfig():void {
+        // 获取 flashvars 传递进来的 config 
         var configStr:String = Preloader(root).injectedConfig || root.loaderInfo.parameters["config"];
         var configObj:Object = configStr && configStr.indexOf("{") == 0 ? ConfigParser.parse(configStr) : {};
         _config = ConfigParser.parseConfig(configObj, BuiltInConfig.config, loaderInfo.url, VersionInfo.controlsVersion, VersionInfo.audioVersion);
