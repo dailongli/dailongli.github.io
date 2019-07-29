@@ -70,6 +70,8 @@ public class Launcher extends StyleableSprite implements ErrorHandler {
     private function createFlashVarsConfig():void {
         var configStr:String = Preloader(root).injectedConfig || root.loaderInfo.parameters["config"];
         var configObj:Object = configStr && configStr.indexOf("{") == 0 ? ConfigParser.parse(configStr) : {};
+        _config = ConfigParser.parseConfig(configObj, BuiltInConfig.config, loaderInfo.url, VersionInfo.controlsVersion, VersionInfo.audioVersion);
+        callAndHandleError(initPhase1, PlayerError.INIT_FAILED);
     }
     private function initPhase1():void {
         createFlowplayer();
@@ -77,6 +79,16 @@ public class Launcher extends StyleableSprite implements ErrorHandler {
     private function createFlowplayer():void {
         _flowplayer = new Flowplayer(stage, _pluginRegistry, _panel, _animationEngine, this, this, _config, URLUtil.playerBaseUrl);
     }
+}
+```
+
+
+
+
+```
+public class ConfigParser {
+    var configObj:Object = config is String ? com.adobe.serialization.json.JSONforFP.decode(config as String) : config;
+    return new Config(configObj, builtInConfig, playerSwfUrl, controlsVersion, audioVersion);
 }
 ```
 
@@ -90,13 +102,6 @@ public function Config(config:Object, builtInConfig:Object, playerSwfUrl:String,
 }
 ```
 
-
-```
-public class ConfigParser {
-    var configObj:Object = config is String ? com.adobe.serialization.json.JSONforFP.decode(config as String) : config;
-    return new Config(configObj, builtInConfig, playerSwfUrl, controlsVersion, audioVersion);
-}
-```
 
 
 
