@@ -18,9 +18,9 @@ sudo cp /etc/fstab /etc/fstab.backup
 
 Execute the following command to make a fstab entry with the UUID of the disk.
 
-
+```
 echo UUID=`sudo blkid -s UUID -o value /dev/sdb` /data ext4 discard,defaults,nofail 0 2 | sudo tee -a /etc/fstab
-
+```
 
 Check the UUID of the extra disk
 
