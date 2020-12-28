@@ -14,6 +14,7 @@ sudo gem install bundler
 bundle install
 
 ln -s /root/metasploit-framework/msfconsole /usr/local/bin/
+ln -s /root/metasploit-framework/msfvenom /usr/local/bin/
 
 
 git config --global user.name "NAME HERE"
