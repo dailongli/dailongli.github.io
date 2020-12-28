@@ -13,21 +13,13 @@ cd metasploit-framework/
 sudo gem install bundler
 bundle install
 
-
-./msfconsole
-
+ln -s /root/metasploit-framework/msfconsole /usr/local/bin/
 
 
 git config --global user.name "NAME HERE"
-
 git config --global user.email "email@example.com"
-
 ./msfupdate
 
-
-
 crontab -e
-
-
 0 1 * * * /root/metasploit-framework/msfupdate > /dev/null 2>&1
 ```
