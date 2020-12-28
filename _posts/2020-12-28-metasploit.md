@@ -29,5 +29,5 @@ git config --global user.email "email@example.com"
 crontab -e
 
 
-0 1 * * * /home/$name/apps/metasploit-framework/msfupdate > /dev/null 2>&amp;1
+0 1 * * * /home/$name/apps/metasploit-framework/msfupdate > /dev/null 2>&1
 ```
