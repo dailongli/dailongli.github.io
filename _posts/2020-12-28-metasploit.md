@@ -95,8 +95,13 @@ Nmap done: 256 IP addresses (13 hosts up) scanned in 2.83 seconds
 
 
 msf6 > use auxiliary/scanner/smb/smb_ms17_010
-set rhost 192.168.59.1
-exploit
+msf6 auxiliary(scanner/smb/smb_ms17_010) > set rhost 192.168.59.1
+msf6 auxiliary(scanner/smb/smb_ms17_010) > exploit
+
+[+] 192.168.59.160:445    - Host is likely VULNERABLE to MS17-010! - Windows Server 2008 R2 Enterprise 7600 x64 (64-bit)
+[*] 192.168.59.160:445    - Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+
 
 
 
