@@ -45,52 +45,6 @@ exploit
 永恒之蓝
 ```
 msf6 > nmap -p 445 192.168.59.0/24 --open
-Starting Nmap 7.80 ( https://nmap.org ) at 2020-12-29 02:05 PST
-Nmap scan report for 192.168.59.1
-Host is up (0.0017s latency).
-
-PORT    STATE SERVICE
-445/tcp open  microsoft-ds
-
-Nmap scan report for 192.168.59.12
-Host is up (0.0023s latency).
-
-PORT    STATE SERVICE
-445/tcp open  microsoft-ds
-
-Nmap scan report for 192.168.59.13
-Host is up (0.0014s latency).
-
-PORT    STATE SERVICE
-445/tcp open  microsoft-ds
-
-Nmap scan report for 192.168.59.23
-Host is up (0.0011s latency).
-
-PORT    STATE SERVICE
-445/tcp open  microsoft-ds
-
-Nmap scan report for 192.168.59.24
-Host is up (0.0056s latency).
-
-PORT    STATE SERVICE
-445/tcp open  microsoft-ds
-
-Nmap scan report for 192.168.59.100
-Host is up (0.0011s latency).
-
-PORT    STATE SERVICE
-445/tcp open  microsoft-ds
-
-Nmap scan report for 192.168.59.160
-Host is up (0.0035s latency).
-
-PORT    STATE SERVICE
-445/tcp open  microsoft-ds
-
-Nmap done: 256 IP addresses (13 hosts up) scanned in 2.83 seconds
-
-
 
 
 
